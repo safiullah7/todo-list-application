@@ -80,7 +80,7 @@
 
 		callback = callback || function () {};
 		// Generate an ID
-		var newId = "";
+		var newId;
 		
 		if (todos.length === 0)
 			newId = 600000;
@@ -91,7 +91,8 @@
 		if (id) {
 			// removing double-forloop for optimization and code simplicity
 			var matchingTodo = todos.filter(todo => todo.id === id)[0];
-			matchingTodo.title = updateData.title;
+			matchingTodo.title = updateData.title ?? matchingTodo.title;
+			matchingTodo.completed = updateData.completed ?? matchingTodo.completed;
 
 			localStorage[this._dbName] = JSON.stringify(data);
 			callback.call(this, todos);
