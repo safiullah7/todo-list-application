@@ -89,14 +89,9 @@
 
 		// If an ID was actually given, find the item and update each property
 		if (id) {
-			for (var i = 0; i < todos.length; i++) {
-				if (todos[i].id === id) {
-					for (var key in updateData) {
-						todos[i][key] = updateData[key];
-					}
-					break;
-				}
-			}
+			// removing double-forloop for optimization and code simplicity
+			var matchingTodo = todos.filter(todo => todo.id === id)[0];
+			matchingTodo.title = updateData.title;
 
 			localStorage[this._dbName] = JSON.stringify(data);
 			callback.call(this, todos);
