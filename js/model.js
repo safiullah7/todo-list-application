@@ -82,15 +82,6 @@
 	};
 
 	/**
-	 * WARNING: Will remove ALL data from storage.
-	 *
-	 * @param {function} callback The callback to fire when the storage is wiped.
-	 */
-	Model.prototype.removeAll = function (callback) {
-		this.storage.drop(callback);
-	};
-
-	/**
 	 * Returns a count of all todos
 	 */
 	Model.prototype.getCount = function (callback) {
