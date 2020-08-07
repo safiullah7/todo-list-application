@@ -79,16 +79,13 @@
 		var todos = data.todos;
 
 		callback = callback || function () {};
-
 		// Generate an ID
-	    var newId = ""; 
-	    var charset = "0123456789";
-
-		// todo: chance to get duplicate IDs
-		// take max id from todos and add 1 to get new id
-        for (var i = 0; i < 6; i++) {
-     		newId += charset.charAt(Math.floor(Math.random() * charset.length));
-		}
+		var newId = "";
+		
+		if (todos.length === 0)
+			newId = 600000;
+		else
+			newId = Math.max.apply(Math, todos.map(function(o) { return o.id; })) + 1;
 
 		// If an ID was actually given, find the item and update each property
 		if (id) {
