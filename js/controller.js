@@ -5,8 +5,8 @@
 	 * Takes a model and view and acts as the controller between them
 	 *
 	 * @constructor
-	 * @param {object} model The model instance
-	 * @param {object} view The view instance
+	 * @param {Model} model The model instance
+	 * @param {View} view The view instance
 	 */
 	function Controller(model, view) {
 		var self = this;
@@ -49,7 +49,7 @@
 	/**
 	 * Loads and initialises the view
 	 *
-	 * @param {string} '' | 'active' | 'completed'
+	 * @param {string} locationHash '' | 'active' | 'completed'
 	 */
 	Controller.prototype.setView = function (locationHash) {
 		var route = locationHash.split('/')[1];
@@ -91,6 +91,7 @@
 	/**
 	 * An event to fire whenever you want to add an item. Simply pass in the event
 	 * object and it'll handle the DOM insertion and saving of the new item.
+	 * @param {string} title The title of the todo to be added is passed
 	 */
 	Controller.prototype.addItem = function (title) {
 		var self = this;
@@ -105,8 +106,9 @@
 		});
 	};
 
-	/*
+	/**
 	 * Triggers the item editing mode.
+	 * @param {number} id The ID of the specific todo which is to be edited
 	 */
 	Controller.prototype.editItem = function (id) {
 		var self = this;
@@ -115,8 +117,10 @@
 		});
 	};
 
-	/*
+	/**
 	 * Finishes the item editing mode successfully.
+	 * @param {number} id The ID of the todo whose been edited
+	 * @param {string} title The updated title to save it
 	 */
 	Controller.prototype.editItemSave = function (id, title) {
 		var self = this;
@@ -132,8 +136,9 @@
 		}
 	};
 
-	/*
+	/**
 	 * Cancels the item editing mode.
+	 * @param {number} id ID of the todolist item which was opened for editing
 	 */
 	Controller.prototype.editItemCancel = function (id) {
 		var self = this;
@@ -203,6 +208,7 @@
 	/**
 	 * Will toggle ALL checkboxes' on/off state and completeness of models.
 	 * Just pass in the event object.
+	 * @param {boolean} completed status whether todolist completed or not
 	 */
 	Controller.prototype.toggleAll = function (completed) {
 		var self = this;
@@ -255,6 +261,7 @@
 
 	/**
 	 * Simply updates the filter nav's selected states
+	 * @param {string} currentPage '' | 'active' | 'completed' | to update filter
 	 */
 	Controller.prototype._updateFilterState = function (currentPage) {
 		// Store a reference to the active route, allowing us to re-filter todo

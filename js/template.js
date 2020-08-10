@@ -11,6 +11,11 @@
 		'`': '&#x60;'
 	};
 
+	/**
+	 * Escapes a specific character 
+	 * @param {string} chr 
+	 * @returns {string} html escaped string character returned 
+	 */
 	var escapeHtmlChar = function (chr) {
 		return htmlEscapes[chr];
 	};
@@ -18,6 +23,10 @@
 	var reUnescapedHtml = /[&<>"'`]/g;
 	var reHasUnescapedHtml = new RegExp(reUnescapedHtml.source);
 
+	/**
+	 * If title of todo has html escapable characters, then this function escapes
+	 * @param {string} string 
+	 */
 	var escape = function (string) {
 		return (string && reHasUnescapedHtml.test(string))
 			? string.replace(reUnescapedHtml, escapeHtmlChar)
@@ -97,7 +106,7 @@
 	/**
 	 * Updates the text within the "Clear completed" button
 	 *
-	 * @param  {[type]} completedTodos The number of completed todos.
+	 * @param  {number} completedTodos The number of completed todos.
 	 * @returns {string} String containing the count
 	 */
 	Template.prototype.clearCompletedButton = function (completedTodos) {
