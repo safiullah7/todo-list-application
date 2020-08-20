@@ -13,7 +13,7 @@
 
 * Upon running index.html, you will see the following page
 
-    ![A test image](./guidepics/1.png)
+    ![A test image](./guidepics/1.PNG)
 
 * To add a new task, type the name of the task and press ENTER, as shown below
 
