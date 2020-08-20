@@ -13,45 +13,45 @@
 
 * Upon running index.html, you will see the following page
 
-    ![A test image](../guidepics/1.png)
+    ![A test image](./guidepics/1.png)
 
 * To add a new task, type the name of the task and press ENTER, as shown below
 
-  ![alt text](../guidepics/2.png)
+  ![alt text](./guidepics/2.png)
 
 * After pressing ENTER, it will show as
 
-  ![alt text](../guidepics/2a.png)
+  ![alt text](./guidepics/2a.png)
 
 * To mark a task as Completed, you can click on the checkbox on each task item, as highlighted below
 
-  ![alt text](../guidepics/3.png)
+  ![alt text](./guidepics/3.png)
 
-  ![alt text](../guidepics/4a.png)
+  ![alt text](./guidepics/4a.png)
 
 * All the Completed tasks can be seen in the separate "Completed" tab / filter
 
-  ![alt text](../guidepics/4b.png)
+  ![alt text](./guidepics/4b.png)
 
 * You can check all the "Active" tasks in the Active tab. "All" tab will contain both active and completed tasks
 
-  ![alt text](../guidepics/5.png)
+  ![alt text](./guidepics/5.png)
 
 * On the bottom left you can see the number of tasks which are active. Also, there's a button on bottom right to clear the tasks which are completed
 
-  ![alt text](../guidepics/6.png)
+  ![alt text](./guidepics/6.png)
 
 * To mark all the tasks as "Completed" or "Active" again, you can click this button
 
-  ![alt text](../guidepics/7.png)
+  ![alt text](./guidepics/7.png)
 
 * If you want to edit a task, "double click" on a task and the task will be opened in the edit mode for you to edit it. Pressing ENTER will save the update and ESC will not save it and get out of edit mode
 
-  ![alt text](../guidepics/8.png)
+  ![alt text](./guidepics/8.png)
 
 * If you want to delete a task, hover the mouse over to the desired task and click on the red cross button to delete it
 
-  ![alt text](../guidepics/9.png)
+  ![alt text](./guidepics/9.png)
 
 ----------------------------------
 
@@ -302,3 +302,7 @@ Model has the job of data persistance. Controller asks the Model to perform data
   ```js
   expect(view.render).toHaveBeenCalledWith('showEntries', {title: 'my todo', completed: true});
   ```
+
+-----------
+
+# Performance Evaluation
