@@ -306,3 +306,87 @@ Model has the job of data persistance. Controller asks the Model to perform data
 -----------
 
 # Performance Evaluation
+
+## Competitor:
+
+The competitor website is todolistme.net is a full fledged solution with a lot other features as well. It has an intuitive UI and it is easy to use. The user interface is very good and it has made the functionalities very easy to understand and use. Some of the features which separate it from our app are:
+
+* Sorting of the tasks
+
+* Can create multiple projects and add todos in them.
+
+* Separation of Today / Tomorrow tasks.
+
+* Print functionality to print the tasks.
+
+* New Category and new lists functionality
+
+* Login / Register
+
+* Server maintained data and sync able.
+
+## Performance Evaluation
+
+Competitor:
+
+![A test image](./guidepics/performance-competitor.PNG)
+
+![A test image](./guidepics/performance-competitor-b.PNG)
+
+![A test image](./guidepics/performance-competitor-c.PNG)
+
+Speed index, Time to interactive and Largest contentful paint are three points where improvements can be made
+
+Suggestions to improve:
+
+* Avoid unnecessary downloads to improve rendering speed
+
+* Usage of caching as much as possible
+
+* Optimization of images to use sprites or resized images
+
+* Limit the number of fonts used in the app.
+
+* Images which aren’t important at the user’s first contact should lazy load until the user scrolls down.
+
+* Minify and uglify CSS and JS using gulp and babel
+
+### Our Application
+
+Our application is purely client javascript based and since it does not have a server, it is very fast compared to competitor. But not having a server is also its drawback because a user is unable to save its data permanently.
+
+
+### Performance evaluation:
+
+![A test image](./guidepics/performance-self.PNG)
+
+![A test image](./guidepics/performance-self-b.PNG)
+![A test image](./guidepics/performance-self-c.PNG)
+
+* Since it is purely Client-JS based and does not have a server, it is very fast
+
+* To increase load time, CSS and JS should be minified and uglified using gulp and babel.
+
+* Some of the coding practices should be altered and ES6+ javascript should be used
+
+* Object Oriented Javascript practices using ES6+ should be used
+
+* Sprites should be used for images to increase load speed, or image resizing.
+
+### Scalability:
+
+We can scale this applciation easily by following some of observations:
+
+* Having a server side to store the data somewhere
+
+* Allowing users to register and login
+
+* Allowing users to create multiple projects and lists which will scale the app throughout
+
+* Minify JS and CSS and uglify them on production
+
+* Using lazy loading as much as possible
+
+* Using sprites for images or using resized images
+
+* Code should be converted to ES6+ code and OOP power should be used.
